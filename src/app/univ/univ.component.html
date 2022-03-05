@@ -1,0 +1,50 @@
+<div class="panel-header panel-header-sm">
+</div>
+<div class="main-content">
+  <div class="row">
+    <div class="col-md-12">
+      <div class="card">
+        <div class="card-header">
+          <h4 class="card-title"> Liste des universités</h4>
+        </div>
+        <div class="card-body">
+          <div class="table-responsive">
+            <table class="table">
+              <thead class=" text-primary">
+
+                <th>
+                  ID
+                </th>
+                <th>
+                  Code_Univ
+                </th>
+                <th>
+                Nom_Univ
+                </th>
+                <th>
+                  Operation
+                </th>
+              
+              </thead>
+
+              
+                <tr *ngFor="let univ of univs">
+                  <td>{{ univ._id }}</td>
+                  <td>{{ univ.code_univ }}</td>
+                  <td>{{ univ.nom_univ }}</td>
+
+                  <td style="text-align:left;">
+                    <button type="button" class="btn btn-success" [routerLink]="['/admin/univs/update',univ._id]">MODIFIER</button>
+                    <button type="button" class="btn btn-danger" (click)="deleteUniv(univ._id)">SUPPRIMER</button>
+                  </td>
+                </tr>
+
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+    <button type="button" class="btn btn-info" routerLink="/admin/univs/add">Ajouter une université</button>
+
+  </div>
+</div>

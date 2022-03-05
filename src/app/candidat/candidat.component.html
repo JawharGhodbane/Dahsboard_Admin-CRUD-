@@ -11,6 +11,10 @@
           <div class="table-responsive">
             <table class="table">
               <thead class=" text-primary">
+
+                <th>
+                  ID
+                </th>
                 <th>
                   Nom
                 </th>
@@ -20,102 +24,35 @@
                 <th>
                   Email
                 </th>
-                <th class="text-right">
+                <th>
                   Pays
                 </th>
                 <th>
                   Operation
                 </th>
-               
+              
               </thead>
 
-              <tbody>
-                <tr>
-                  <td>
-                    Ghodbane
-                  </td>
-                  <td>
-                    Jawhar
-                  </td>
-                  <td>
-                    jawharghod@gmail.com
-                  </td>
-                  <td class="text-right">
-                    Algerie
-                  </td>
-                  <td>
-                    <button type="button" class="btn btn-success">UPDATE</button>
-                    <button type="button" class="btn btn-danger">DELETE</button>
+              
+                <tr *ngFor="let candidat of candidats">
+                  <td>{{ candidat._id }}</td>
+                  <td>{{ candidat.nom }}</td>
+                  <td>{{ candidat.prenom }}</td>
+                  <td>{{ candidat.email }}</td>
+                  <td>{{ candidat.pays_origine }}</td>
 
-                  </td>
-                </tr>
-               
-                <tr>
-                  <td>
-                    Hidri
-                  </td>
-                  <td>
-                    Rayen
-                  </td>
-                  <td>
-                    raydr@gmail.com
-                  </td>
-                  <td class="text-right">
-                    Maroc
-                  </td>
-                  <td>
-                    <button type="button" class="btn btn-success">UPDATE</button>
-                    <button type="button" class="btn btn-danger">DELETE</button>
-
-                  </td>
-                </tr>
-               
-                <tr>
-                  <td>
-                    ahmed
-                  </td>
-                  <td>
-                    khmili
-                  </td>
-                  <td>
-                    khemahmed@gmail.com
-                  </td>
-                  <td class="text-right">
-                    Mali
-                  </td>
-                  <td>
-                    <button type="button" class="btn btn-success">UPDATE</button>
-                    <button type="button" class="btn btn-danger">DELETE</button>
-
-                  </td>
-                </tr>
-            
-                <tr>
-                  <td>
-                    Raoua
-                  </td>
-                  <td>
-                    dridi
-                  </td>
-                  <td>
-                    dridi@gmail.com
-                  </td>
-                  <td class="text-right">
-                    Brazil
-                  </td>
-                  <td>
-                    <button type="button" class="btn btn-success">UPDATE</button>
-                    <button type="button" class="btn btn-danger">DELETE</button>
+                  <td style="text-align:left;">
+                    <button type="button" class="btn btn-success" [routerLink]="['/admin/candidats/update',candidat._id]">MODIFIER</button>
+                    <button type="button" class="btn btn-danger" (click)="deleteCandidat(candidat._id)">SUPPRIMER</button>
                   </td>
                 </tr>
 
-              </tbody>
             </table>
           </div>
         </div>
       </div>
     </div>
-    <button type="button" class="btn btn-info">Add a candidat</button>
+    <button type="button" class="btn btn-info" routerLink="/admin/candidats/add">Ajouter un candidat</button>
 
   </div>
 </div>

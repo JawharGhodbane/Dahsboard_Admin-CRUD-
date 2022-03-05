@@ -13,9 +13,9 @@ export const ROUTES: RouteInfo[] = [
 
     { path: '/admin/candidats', title: 'Gestion des candidats',  icon:'users_single-02', class: '' },
     { path: '/admin/candidacy', title: 'Gestion des candidatures',  icon:'design_bullet-list-67', class: '' },
-    { path: '/admin/univ', title: 'Gestion des universités',  icon:'ui-1_bell-53', class: '' },
-    { path: '/admin/etab', title: 'Gestion des etablissements',  icon:'ui-1_bell-53', class: '' },
-    { path: '/admin/filiere', title: 'Gestion des filieres',  icon:'ui-1_bell-53', class: '' },
+    { path: '/admin/univs', title: 'Gestion des universités',  icon:'ui-1_bell-53', class: '' },
+    { path: '/admin/etabs', title: 'Gestion des etablissements',  icon:'ui-1_bell-53', class: '' },
+    { path: '/admin/filieres', title: 'Gestion des filieres',  icon:'ui-1_bell-53', class: '' },
 
    /* { path: '/typography', title: 'Typography',  icon:'text_caps-small', class: '' },
     { path: '/upgrade', title: 'Upgrade to PRO',  icon:'objects_spaceship', class: 'active active-pro' }*/

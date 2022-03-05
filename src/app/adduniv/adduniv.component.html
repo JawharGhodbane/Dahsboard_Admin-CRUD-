@@ -1,0 +1,19 @@
+<div class="container">
+    <h1>Ajouter une université</h1>
+    <form [formGroup]="form" (ngSubmit)="submit()">
+      <fieldset>
+        
+        <div class="form-group">
+         <b><label for="code_univ">Entrez le code de l'université</label></b>
+          <input type="text" class="form-control" id="code_univ" formControlName="code_univ"
+          placeholder="code">
+        </div>
+        
+        <div class="form-group">
+           <b><label for="nom_univ">Entrez le nom de l'université</label></b>
+            <input type="text" class="form-control" id="nom_univ" formControlName="nom_univ" placeholder="nom université">
+          </div> 
+          <button type="button" class="btn btn-info" type="submit" >Enregistrer</button>
+      </fieldset>
+    </form>
+</div>

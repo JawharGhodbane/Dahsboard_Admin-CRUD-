@@ -1,0 +1,34 @@
+<div class="container">
+    <h1>Ajouter un candidat</h1>
+    <form [formGroup]="form" (ngSubmit)="submit()">
+      <fieldset>
+        
+        <div class="form-group">
+         <b><label for="nom">Entrez le nom</label></b>
+          <input type="text" class="form-control" id="nom" formControlName="nom"
+          placeholder="nom">
+        </div>
+        
+        <div class="form-group">
+           <b><label for="nom">Entrez le prenom</label></b>
+            <input type="text" class="form-control" id="prenom" formControlName="prenom" placeholder="prenom">
+          </div>
+
+        <div class="form-group">
+          <b><label for="email">Entrez l'adresse email</label></b>
+          <input type="email" class="form-control" id="email" formControlName="email" placeholder="exemple@gmail.com">
+        </div>
+        
+        <div class="form-group">
+            <b><label for="nom">Entrez le pays_origine</label></b>
+            <input type="text" class="form-control" id="pays_origine" formControlName="pays_origine" placeholder="pays">
+          </div>
+          <div class="form-group">
+            <b><label for="nom">Entrez le mot de passe</label></b>
+            <input type="password" class="form-control" id="mot_de_passe" formControlName="mot_de_passe" placeholder="password">
+          </div>
+          <button type="button" class="btn btn-info" type="submit" >Enregistrer</button>
+
+      </fieldset>
+    </form>
+</div>
