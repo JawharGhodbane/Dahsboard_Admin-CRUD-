@@ -14,12 +14,21 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { ToastrModule } from 'ngx-toastr';
 import { UpgradeComponent } from '../../upgrade/upgrade.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+
+//my components
 import { CandidatComponent } from '../../candidat/candidat.component';
 import { CandidaturesComponent } from '../../candidatures/candidatures.component';
-import { Candidat } from '../../Interfaces/candidat';
 import { AddcandidatComponent } from '../../addcandidat/addcandidat.component';
 import { UpdatecandidatComponent } from '../../updatecandidat/updatecandidat.component';
-
+import { UnivComponent } from '../../univ/univ.component';
+import { EtabComponent } from '../../etab/etab.component';
+import { FiliereComponent } from '../../filiere/filiere.component';
+import { AddunivComponent } from '../../adduniv/adduniv.component';
+import { UpdateunivComponent } from '../../updateuniv/updateuniv.component';
+import { AddEtabComponent } from '../../add-etab/add-etab.component';
+import { UpdateEtabComponent } from '../../update-etab/update-etab.component';
+import { AddFiliereComponent } from '../../add-filiere/add-filiere.component';
+import { UpdateFiliereComponent } from '../../update-filiere/update-filiere.component';
 @NgModule({
   imports: [
     CommonModule,
@@ -42,7 +51,18 @@ import { UpdatecandidatComponent } from '../../updatecandidat/updatecandidat.com
     CandidatComponent,
     CandidaturesComponent,
     AddcandidatComponent,
-    UpdatecandidatComponent
+    UpdatecandidatComponent,
+    UnivComponent,
+    EtabComponent,
+    FiliereComponent,
+    AddunivComponent,
+    UpdateunivComponent,
+    AddEtabComponent,
+    UpdateEtabComponent,
+    AddFiliereComponent,
+    UpdateFiliereComponent,
+   
+    
   ]
 })
 

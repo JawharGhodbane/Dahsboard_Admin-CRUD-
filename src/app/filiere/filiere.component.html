@@ -1,1 +1,52 @@
-<p>filiere works!</p>
+<div class="panel-header panel-header-sm">
+</div>
+<div class="main-content">
+  <div class="row">
+    <div class="col-md-12">
+      <div class="card">
+        <div class="card-header">
+          <h4 class="card-title"> Liste des filiéres</h4>
+        </div>
+        <div class="card-body">
+          <div class="table-responsive">
+            <table class="table">
+              <thead class=" text-primary">
+
+                <th>
+                  ID
+                </th>
+                <th>
+                  Code_filiere
+                </th>
+                <th>
+                Nom_filiere
+                </th>
+                <th>
+                  Code de l'etablissement qu'il appartient 
+                </th>
+                <th>
+                  Operation
+                </th>
+              </thead>
+
+                <tr *ngFor="let filiere of filieres">
+                  <td>{{ filiere._id }}</td>
+                  <td>{{ filiere.code_filiere }}</td>
+                  <td>{{ filiere.nom_filiere }}</td>
+                  <td>{{ filiere.etablissement }}</td>
+                  
+                  <td style="text-align:left;">
+                    <button type="button" class="btn btn-success" [routerLink]="['/admin/filieres/update',filiere._id]">MODIFIER</button>
+                    <button type="button" class="btn btn-danger" (click)="deleteFiliere(filiere._id)">SUPPRIMER</button>
+                  </td>
+                </tr>
+
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+    <button type="button" class="btn btn-info" routerLink="/admin/filieres/add">Ajouter une filiére</button>
+
+  </div>
+</div>

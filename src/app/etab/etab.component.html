@@ -1,1 +1,52 @@
-<p>etab works!</p>
+<div class="panel-header panel-header-sm">
+</div>
+<div class="main-content">
+  <div class="row">
+    <div class="col-md-12">
+      <div class="card">
+        <div class="card-header">
+          <h4 class="card-title"> Liste des etablissements</h4>
+        </div>
+        <div class="card-body">
+          <div class="table-responsive">
+            <table class="table">
+              <thead class=" text-primary">
+
+                <th>
+                  ID
+                </th>
+                <th>
+                  Code_etab
+                </th>
+                <th>
+                Nom_etab
+                </th>
+                <th>
+                  Id de l'université qu'il appartient 
+                </th>
+                <th>
+                  Operation
+                </th>
+              </thead>
+
+                <tr *ngFor="let etab of etabs">
+                  <td>{{ etab._id }}</td>
+                  <td>{{ etab.code_etab }}</td>
+                  <td>{{ etab.nom_etab }}</td>
+                  <td>{{ etab.universite }}</td>
+                  
+                  <td style="text-align:left;">
+                    <button type="button" class="btn btn-success" [routerLink]="['/admin/etabs/update',etab._id]">MODIFIER</button>
+                    <button type="button" class="btn btn-danger" (click)="deleteEtab(etab._id)">SUPPRIMER</button>
+                  </td>
+                </tr>
+
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+    <button type="button" class="btn btn-info" routerLink="/admin/etabs/add">Ajouter un etablissement</button>
+
+  </div>
+</div>
